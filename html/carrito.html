@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/carrito.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="icon" href="../img/ICONO.png">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../img/home-regular-24.png" alt=""></a>
+    </header>
+    <h2>Carrito de Compras</h2>
+    <div id="cart">
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody class="cartItems" id="cartItems"></tbody>
+        </table>
+        <p id="total"></p><br>
+        <button onclick="checkout()">Pagar</button>
+    </div>
+
+    <script src="../app.js"></script>
+</body>
+</html>

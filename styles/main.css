@@ -1,10 +1,10 @@
 *{
-    background: #4b0404;
     margin: 0;
     padding: 0;
 }
 
 body{
+    background: #4b0404;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -12,9 +12,18 @@ body{
 }
 
 header{
-    width: 90%;
+    width: 97.5%;
     height: 4rem;
     margin: 1rem;
-    background: #fbd24e;
+    /*background: #fbd24e;*/
 }
 
+header > a > img{
+    width: 3rem;
+    top: 10%;
+    left: 50%;
+}
+header > a{
+    top: 10%;
+    left: 50%;
+}
