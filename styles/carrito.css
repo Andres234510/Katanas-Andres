@@ -33,3 +33,11 @@ p{
     color: #ffdfdf;
     margin: 1rem;
 }
+
+.cart-row {
+    transition: background-color 0.3s ease;
+}
+.cart-row.updated {
+    background-color: #f8d7da;
+}
+

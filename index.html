@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/title.css">
     <link rel="stylesheet" href="styles/product.css">
@@ -11,147 +12,245 @@
 </head>
 <body>
 
-    <header>
-
-        <a href="html/carrito.html"><img src="img/cart-alt-solid-24.png" alt=""></a>
-        
-
+    <header class="container-fluid d-flex justify-content-end p-3">
+        <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"></span>
+        <a href="html/carrito.html"><img src="img/cart-alt-solid-24.png" alt="Carrito"></a>
     </header>
-
-    <div class="title">
-        <h1>KATANAS 
-            ANDRES
-        </h1> 
-        <img src="img/LOGO.png" alt="LOGO">
+    
+    <div class="title text-center my-4">
+        <h1>KATANAS ANDRES</h1> 
+        <img src="img/LOGO.png" alt="LOGO" class="img-fluid">
     </div>
 
-    <div class="marker">
-
-        <div class="product">
-            <img src="img/1.jpg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>100000</p>
-            <button onclick="addToCart('Producto 1', 100000)">Añadir al Carrito</button>
+    <div class="container">
+        <div class="row marker">
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded"  onclick="showProductDetails('img/1.jpg', 'Blue katana', 100000)">
+                    <img src="img/1.jpg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body ">
+                        <h3 class="card-title">Blue katana</h3>
+                        <p class="card-text">$100,000</p>
+                        <button onclick="addToCart('Blue katana', 100000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/2.jpg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Golden katana</h3>
+                        <p>$300,000</p>
+                        <button onclick="addToCart('Producto 2', 300000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/3.jpg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>black red Katana</h3>
+                        <p>$120,000</p>
+                        <button onclick="addToCart('Producto 3', 120000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/4.jpg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>katana</h3>
+                        <p>$130,000</p>
+                        <button onclick="addToCart('Producto 4', 130000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/5.jpg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Silver katana</h3>
+                        <p>$100,000</p>
+                        <button onclick="addToCart('Producto 5', 100000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/6.jpg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Dragon katana</h3>
+                        <p>$400,000</p>
+                        <button onclick="addToCart('Producto 6', 400000)"class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/7.jpeg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Blue katana</h3>
+                        <p>$150,000</p>
+                        <button onclick="addToCart('Producto 7', 150000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/8.jpg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Mini golden katana</h3>
+                        <p>$102,000</p>
+                        <button onclick="addToCart('Producto 8', 102000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/9.jpeg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Black Silver katana</h3>
+                        <p class="card-text">$100,000</p>
+                        <button onclick="addToCart('Blue katana', 100000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/10.jpeg" alt="Blue katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Black katana</h3>
+                        <p>$170,000</p>
+                        <button onclick="addToCart('Producto 10', 170000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/11.jpeg" alt="Yellow Black katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Yellow Black katana</h3>
+                        <p>$110,000</p>
+                        <button onclick="addToCart('Producto 11', 110000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/12.jpeg" alt="Withe katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Withe katana</h3>
+                        <p>$70,000</p>
+                        <button onclick="addToCart('Producto 12', 70000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/13.jpeg" alt="Black katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Black katana</h3>
+                        <p>$100,000</p>
+                        <button onclick="addToCart('Producto 13', 100000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/14.jpeg" alt="Set katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Set katana</h3>
+                        <p>$71,000</p>
+                        <button onclick="addToCart('Producto 14', 71000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/15.jpeg" alt="Golden Silver katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Golden Silver katana</h3>
+                        <p>$90,000</p>
+                        <button onclick="addToCart('Producto 15', 90000)"class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/16.jpeg" alt="Green katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Green katana</h3>
+                        <p>$110,000</p>
+                        <button onclick="addToCart('Producto 16', 110000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/17.jpeg" alt="Silver katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Silver katana</h3>
+                        <p>$610,000</p>
+                        <button onclick="addToCart('Producto 17', 610000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/18.jpg" alt="Red Black katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Red Black katana</h3>
+                        <p>$155,000</p>
+                        <button onclick="addToCart('Producto 18', 155000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/19.jpeg" alt="Dark katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Dark katana</h3>
+                        <p>$200,000</p>
+                        <button onclick="addToCart('Producto 19', 200000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="product shadow-sm p-3 mb-5 rounded">
+                    <img src="img/20.jpeg" alt="Silver Dark katana" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h3>Silver Dark katana</h3>
+                        <p>$110,000</p>
+                        <button onclick="addToCart('Producto 20', 110000)" class="btn btn-primary">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="product">
-            <img src="img/2.jpg" alt="smart-protect-2">
-            <h3>Golden katana</h3>
-            <p>300000</p>
-            <button onclick="addToCart('Producto 2', 300000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/3.jpg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>120000</p>
-            <button onclick="addToCart('Producto 3', 120000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/4.jpg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>130000</p>
-            <button onclick="addToCart('Producto 4', 130000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/5.jpg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>100000</p>
-            <button onclick="addToCart('Producto 5', 100000)">Añadir al Carrito</button>
-        </div>
-    
-        <div class="product">
-            <img src="img/6.jpg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>400000</p>
-            <button onclick="addToCart('Producto 6', 400000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/7.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>150000</p>
-            <button onclick="addToCart('Producto 7', 150000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/8.jpg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>102000</p>
-            <button onclick="addToCart('Producto 8', 102000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/9.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>100000</p>
-            <button onclick="addToCart('Producto 9', 100000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/10.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>170000</p>
-            <button onclick="addToCart('Producto 10', 170000)">Añadir al Carrito</button>
-        </div>
-    
-        <div class="product">
-            <img src="img/11.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>110000</p>
-            <button onclick="addToCart('Producto 11', 110000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/12.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>70000</p>
-            <button onclick="addToCart('Producto 12', 70000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/13.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>100000</p>
-            <button onclick="addToCart('Producto 13', 100000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/14.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>71000</p>
-            <button onclick="addToCart('Producto 14', 71000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/15.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>90000</p>
-            <button onclick="addToCart('Producto 15', 90000)">Añadir al Carrito</button>
-        </div>
-    
-        <div class="product">
-            <img src="img/16.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>110000</p>
-            <button onclick="addToCart('Producto 16', 110000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/17.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>610000</p>
-            <button onclick="addToCart('Producto 17', 610000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/18.jpg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>155000</p>
-            <button onclick="addToCart('Producto 18', 155000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/19.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>200000</p>
-            <button onclick="addToCart('Producto 19', 200000)">Añadir al Carrito</button>
-        </div>
-        <div class="product">
-            <img src="img/20.jpeg" alt="smart-protect-2">
-            <h3>Blue katana</h3>
-            <p>110000</p>
-            <button onclick="addToCart('Producto 20', 110000)">Añadir al Carrito</button>
-        </div>
-
     </div>
+    
+
+    <!-- Modal de Detalle de Producto -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Detalles del Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido dinámico aquí -->
+                <img id="modalImage" class="img-fluid mb-3" alt="Producto">
+                <h3 id="modalTitle"></h3>
+                <p id="modalPrice"></p>
+                <p id="modalDescription">Descripción del producto.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Añadir al Carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     
 
